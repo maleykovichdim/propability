@@ -63,7 +63,7 @@ void get_combination(int index, Ctx * ctx, std::vector<std::vector<int>> * resul
 		return;
 	}
 
-	for (int i = ctx->num_person; i > 0; i--)
+	for (int i = ctx->num_points; i > 0; i--)
 	{
 		std::vector<int> tmp = tmp_;
 		tmp.push_back(i);
@@ -91,7 +91,7 @@ std::vector<std::vector<int>> get_correct_point_combinations(const std::vector<s
 		get_combination(num_person - 1, &ctx, &result, tmp);
 		tmp.clear();
 	}
-#if 0
+#if 1
 	for (auto v : result)
 	{
 		for (auto x : v)
